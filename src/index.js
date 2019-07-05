@@ -1,24 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import faker from "faker";
+import Comment from "./Comment";
 
 const App = () => {
+  const currentTime = () => {
+    return new Date().toLocaleTimeString();
+  };
   return (
     <div className="ui container comments">
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" src={faker.image.avatar()} />
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Fitsum
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 6:00PM</span>
-          </div>
-        </div>
-        <div className="text">Nice blog post!</div>
-      </div>
+      <Comment name="Fitsum" time={currentTime()} />
+      <Comment name="Beza" time={currentTime()} />
+      <Comment name="Hasu" time={currentTime()} />
+      <Comment name="Belayneh" time={currentTime()} />
+      <Comment name="Solomon" time={currentTime()} />
     </div>
   );
 };
