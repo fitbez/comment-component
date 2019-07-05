@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Comment from "./Comment";
+import ApprovalCard from "./ApprovalCard";
 
 const App = () => {
   const currentTime = () => {
@@ -8,11 +9,18 @@ const App = () => {
   };
   return (
     <div className="ui container comments">
-      <Comment name="Fitsum" time={currentTime()} />
-      <Comment name="Beza" time={currentTime()} />
-      <Comment name="Hasu" time={currentTime()} />
-      <Comment name="Belayneh" time={currentTime()} />
-      <Comment name="Solomon" time={currentTime()} />
+      <ApprovalCard>
+        <Comment name="Beza" time={currentTime()} />
+      </ApprovalCard>
+      <ApprovalCard>
+        <Comment name="Hasu" time={currentTime()} />
+      </ApprovalCard>
+      <ApprovalCard>
+        <Comment name="Belayneh" time={currentTime()} />
+      </ApprovalCard>
+      <ApprovalCard>
+        <Comment name="Solomon" time={currentTime()} />
+      </ApprovalCard>
     </div>
   );
 };
