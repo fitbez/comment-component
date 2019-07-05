@@ -3,7 +3,7 @@ import Faker from "faker";
 
 const Comment = props => {
   return (
-    <div className="comment">
+    <div className="comment" style={{ margin: "5px" }}>
       <a href="/" className="avatar">
         <img alt="avatar" src={Faker.image.avatar()} />
       </a>
